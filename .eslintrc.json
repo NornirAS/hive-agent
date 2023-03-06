@@ -1,0 +1,3 @@
+{
+  "extends": ["@norniras/eslint-config-base-ts"]
+}

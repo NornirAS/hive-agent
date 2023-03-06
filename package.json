@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@norniras/hive-agent",
+  "version": "2.0.3",
+  "type": "module",
+  "author": "Jevgeni Glazunov",
+  "exports": {
+    "./http": "./dist/http/index.js",
+    "./ws": "./dist/ws/index.js"
+  },
+  "typesVersions": {
+    "*": {
+      "http": [
+        "dist/http/index.d.ts"
+      ],
+      "ws": [
+        "dist/ws/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NornirAS/hive-agent.git"
+  },
+  "homepage": "https://github.com/NornirAS/hive-agent#README.md",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "pnpm build && node dist/main.js",
+    "lint": "eslint --ext .ts --ignore-path .gitignore --fix src",
+    "format": "prettier . --write",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@norniras/eslint-config-base-ts": "^1.0.1",
+    "@norniras/prettier-config": "^1.0.1",
+    "@norniras/ts-config": "^1.0.0",
+    "@types/node": "^18.11.18",
+    "@types/ws": "^8.5.3",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "isomorphic-ws": "^5.0.0"
+  },
+  "prettier": "@norniras/prettier-config",
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix",
+    "*": [
+      "prettier --write --ignore-unknown"
+    ]
+  }
+}
