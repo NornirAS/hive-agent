@@ -42,3 +42,10 @@ export interface SendCommandParams {
   targetServiceAddress: string
   command: HiveMessage
 }
+
+export interface AuthConfig {
+  clientId: string
+  clientSecrect: string | undefined
+  username: string | undefined
+  password: string | undefined
+}
