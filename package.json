@@ -1,20 +1,16 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "@norniras/hive-agent",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "type": "module",
   "author": "Jevgeni Glazunov",
   "exports": {
-    "./http": "./dist/http/index.js",
-    "./ws": "./dist/ws/index.js"
+    "./agent": "./dist/agent/index.js"
   },
   "typesVersions": {
     "*": {
-      "http": [
-        "dist/http/index.d.ts"
-      ],
-      "ws": [
-        "dist/ws/index.d.ts"
+      "agent": [
+        "dist/agent/index.d.ts"
       ]
     }
   },
